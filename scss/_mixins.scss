@@ -1,0 +1,59 @@
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform
+}
+
+@mixin transition($transition) {
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin flexbox {
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: -webkit-box;     
+	display: -moz-box;         
+	display: -ms-flexbox;      
+	display: -webkit-flex;     
+	display: flex;
+}
+
+@mixin flex($number) {
+	-webkit-box-flex: $number;
+	-webkit-flex: $number;  
+	-moz-box-flex: $number;         
+	-moz-flex: $number;         
+	-ms-flex: $number;  
+	-o-flex: $number;            
+	flex: $number;     
+}
+
+@mixin animate-with-keyframes($properties) {
+	-webkit-animation: $properties; 
+	-moz-animation: $properties; 
+	-o-animation: $properties; 
+	animation: $properties;  
+}
+
+@mixin multi-animate-with-keyframes($property1,$property2) {
+	-webkit-animation: $property1, $property2; 
+	-moz-animation: $property1, $property2; 
+	-o-animation: $property1, $property2; 
+	animation: $property1, $property2;  
+}
+
+@mixin animate {
+	@include transition(all .25s ease-in-out);
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder {@content}
+    &::-moz-placeholder {@content}
+    &:-ms-input-placeholder {@content}  
+}

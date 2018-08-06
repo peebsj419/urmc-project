@@ -1,0 +1,533 @@
+/*----- Imports -----*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+input, button {
+  outline: none;
+  border: none;
+  background: transparent; }
+
+/*----- Variables -----*/
+/* Colors */
+/* Padding/Margin default */
+/*----- General Styles -----*/
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative; }
+
+body, html {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; }
+  body.no-scroll {
+    overflow-y: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  color: #00467f;
+  text-decoration: none; }
+
+section {
+  padding: 20px 20px 0; }
+
+h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 10px 0; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.align-center {
+  align-items: center; }
+
+.icon {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  cursor: pointer; }
+
+/*----- Popup -----*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+  .modal.animate-in {
+    -webkit-animation: fade-in 0.25s ease-in-out forwards;
+    -moz-animation: fade-in 0.25s ease-in-out forwards;
+    -o-animation: fade-in 0.25s ease-in-out forwards;
+    animation: fade-in 0.25s ease-in-out forwards;
+    display: block; }
+  .modal.animate-out {
+    -webkit-animation: fade-out 0.5s ease-in-out forwards;
+    -moz-animation: fade-out 0.5s ease-in-out forwards;
+    -o-animation: fade-out 0.5s ease-in-out forwards;
+    animation: fade-out 0.5s ease-in-out forwards; }
+    .modal.animate-out .modal-container {
+      -webkit-animation: slide-out 0.25s ease-in-out forwards;
+      -moz-animation: slide-out 0.25s ease-in-out forwards;
+      -o-animation: slide-out 0.25s ease-in-out forwards;
+      animation: slide-out 0.25s ease-in-out forwards; }
+  .modal-container {
+    -webkit-animation: slide-in 0.5s 0.25s ease-in-out forwards;
+    -moz-animation: slide-in 0.5s 0.25s ease-in-out forwards;
+    -o-animation: slide-in 0.5s 0.25s ease-in-out forwards;
+    animation: slide-in 0.5s 0.25s ease-in-out forwards;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: -100%;
+    left: 50%;
+    width: calc(100% - (10px * 2));
+    max-width: 600px;
+    padding: 40px 20px 40px;
+    background-color: #fff;
+    position: absolute; }
+  .modal-close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #3597d9;
+    width: 40px;
+    height: 40px; }
+  .modal p {
+    margin: 20px 0; }
+  .modal ul {
+    margin-top: 10px; }
+  .modal li {
+    margin-top: 5px; }
+
+@keyframes fade-in {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: rgba(0, 0, 0, 0.7); } }
+
+@keyframes fade-out {
+  0% {
+    background-color: rgba(0, 0, 0, 0.7); }
+  100% {
+    background-color: transparent; } }
+
+@keyframes slide-in {
+  0% {
+    top: -100%;
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  80% {
+    top: 60%; }
+  100% {
+    top: 50%; } }
+
+@keyframes slide-out {
+  0% {
+    top: 50%; }
+  20% {
+    top: 60%; }
+  100% {
+    top: -100%; } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE didn't like the slide in. No time to investigate */
+  .modal .modal-container {
+    top: 50%; } }
+
+/*----- Header -----*/
+header {
+  background-color: #00467f; }
+  header .header-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center; }
+
+.strong-logo {
+  max-width: 70vw; }
+
+/*----- Navigation -----*/
+.main-nav {
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  padding-top: 80px;
+  width: 90vw;
+  max-width: 400px;
+  position: absolute;
+  right: -100vw;
+  top: 0;
+  background-color: #00264f;
+  height: 100vh;
+  z-index: 1;
+  overflow-x: hidden; }
+  .main-nav.slide-in {
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    right: 0; }
+  .main-nav .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer; }
+  .main-nav fieldset {
+    position: relative; }
+  .main-nav .search-field {
+    padding: 10px 0;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    margin-left: 20px;
+    width: calc(100% - (10px * 4));
+    font-family: 'Open Sans', sans-serif; }
+    .main-nav .search-field::-webkit-input-placeholder {
+      color: white;
+      font-family: 'Open Sans', sans-serif; }
+    .main-nav .search-field:-moz-placeholder {
+      color: white;
+      font-family: 'Open Sans', sans-serif; }
+    .main-nav .search-field::-moz-placeholder {
+      color: white;
+      font-family: 'Open Sans', sans-serif; }
+    .main-nav .search-field:-ms-input-placeholder {
+      color: white;
+      font-family: 'Open Sans', sans-serif; }
+  .main-nav .search-icon {
+    background: url("../img/search-icon.svg") no-repeat;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 20px; }
+  .main-nav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #00467f;
+    position: relative; }
+    .main-nav li::after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      content: "";
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      padding: 3px;
+      position: absolute;
+      right: 20px; }
+    .main-nav li.explore-link {
+      border-bottom: none;
+      background-color: #00467f; }
+  .main-nav a {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0 20px; }
+
+/*----- Intro image -----*/
+.intro-img {
+  padding: 0;
+  margin-bottom: -4px;
+  /* Closes gap between image and General Info CTA. Didn't have time to investigate*/ }
+  .intro-img-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto; }
+  .intro-img img {
+    width: 100%; }
+  .intro-img .overlay {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 );
+    /* IE6-9 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 4px;
+    left: 0; }
+  .intro-img h1 {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    line-height: 1.2; }
+    .intro-img h1 span {
+      font-size: 0.8em;
+      font-weight: normal; }
+
+.general-info {
+  text-align: center;
+  font-weight: bold;
+  background-color: #fd0;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto; }
+  .general-info a {
+    white-space: nowrap; }
+
+/*----- Call to action (CTA) -----*/
+.cta {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  margin-top: 10px;
+  text-decoration: none; }
+  .cta span {
+    font-weight: bold; }
+  .cta img {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    /* Fixes IE image sizing issue */ }
+
+.doctor-cta,
+.parking-cta {
+  background-color: #ca6fd4; }
+
+.mychart-cta {
+  background-color: #3597d9; }
+
+.cost-cta {
+  background-color: #ed3a35; }
+
+.librarian-cta {
+  background-color: #00467f; }
+
+.patient-cta {
+  background-color: #e29c50; }
+
+/*----- News -----*/
+.news .cta {
+  color: #222;
+  padding: 10px 0; }
+  .news .cta img {
+    height: 80px;
+    width: 80px; }
+
+.news .see-more {
+  margin-top: 10px;
+  display: block; }
+
+/*----- Quick links -----*/
+.quick-links ul {
+  margin-bottom: 20px; }
+
+.quick-links li {
+  padding: 10px 0; }
+
+/*----- Footer -----*/
+footer a {
+  color: #fff; }
+
+.footer-top {
+  background-color: #3597d9;
+  padding: 0 20px 20px; }
+  .footer-top ul {
+    padding-top: 20px; }
+  .footer-top li {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #00264f; }
+  .footer-top a {
+    font-weight: normal;
+    font-size: .9em; }
+
+.footer-bottom {
+  padding: 20px;
+  background-color: #00264f;
+  color: #fff;
+  text-align: center; }
+  .footer-bottom ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px auto 0;
+    max-width: 800px; }
+  .footer-bottom li {
+    margin: 5px; }
+  .footer-bottom a {
+    text-decoration: underline; }
+
+@media all and (max-width: 400px) {
+  .intro-img h1 {
+    bottom: 10px;
+    left: 10px; } }
+
+@media all and (min-width: 800px) {
+  body {
+    font-size: 16px; }
+    body.no-scroll {
+      margin-right: 17px;
+      /* Width of browser scrollbar so ther is no jumping when scroll is disabled. This is a bandaid */ }
+  header {
+    padding: 20px; }
+  .main-nav {
+    padding-top: 120px; }
+    .main-nav .close-icon {
+      top: 30px;
+      right: 30px; }
+    .main-nav .search-field {
+      padding: 10px 0;
+      margin-left: 30px;
+      width: calc(100% - (10px * 6)); }
+    .main-nav .search-icon {
+      right: 30px; }
+    .main-nav li::after {
+      right: 30px; }
+    .main-nav a {
+      padding: 0 30px; }
+  .intro-img h1 {
+    bottom: 30px;
+    left: 30px;
+    font-size: 2.2em; }
+  section {
+    padding: 30px 30px 0; }
+  .cta {
+    margin-top: 30px; }
+  .footer-top {
+    padding: 0 30px 30px; }
+  .large-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between; }
+    .large-flex a {
+      width: 100%;
+      display: block;
+      padding: 10px 0; }
+  .patient-resources .large-flex {
+    flex-wrap: wrap; }
+  .patient-resources a {
+    padding: 20px;
+    max-width: calc(50% - 15px); } }
+
+@media all and (min-width: 1200px) {
+  header {
+    padding: 20px 60px; }
+  .main-nav {
+    max-width: 500px; }
+    .main-nav .close-icon {
+      right: 60px; }
+    .main-nav .search-field {
+      margin-left: 60px;
+      width: calc(100% - (10px * 12)); }
+    .main-nav .search-icon {
+      right: 60px; }
+    .main-nav li::after {
+      right: 60px; }
+    .main-nav a {
+      padding: 0 60px; }
+  .max-width {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 30px; }
+  .x-large-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+  .flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1; }
+  .flex-2 {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+    -moz-box-flex: 2;
+    -moz-flex: 2;
+    -ms-flex: 2;
+    -o-flex: 2;
+    flex: 2;
+    width: 66%;
+    padding-right: 120px; }
+    .flex-2 section {
+      padding-left: 0;
+      padding-right: 0; }
+  .quick-links {
+    border-left: 1px solid #3597d9;
+    padding: 0 0 0 30px; }
+  .patient-resources a {
+    padding: 20px;
+    max-width: calc(33% - 15px); }
+  .footer-bottom .max-width {
+    padding: 0; } }

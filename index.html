@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strong Memorial Hospital - Rochester, NY - University of Rochester Medical Center</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Modal popup -->
+    <div class="modal">
+        <div class="modal-container">
+            <img src="img/close-icon.svg" class="icon modal-close-icon" alt="Close modal icon">
+            <h1>Welcome to Strong Memorial Hospital</h1>
+            <p>This appears to be your first visit. Try one of the helpful links below or close this window to explore on your own.</p>
+            <ul>
+                <li><a href="https://www.urmc.rochester.edu/people/">Find a physician</a></li>
+                <li><a href="http://mychart.urmc.edu/">Log in to MyChart</a></li>
+                <li><a href="https://www.urmc.rochester.edu/patients-families/bill-pay/general-information/customer-price-estimation.cfm">Health care cost estimator</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-flex">
+            <img src="img/logo.svg" class="strong-logo" alt="Strong Memorial Hospital logo">
+            <img src="img/menu-icon.svg" class="sm-screen icon menu-icon" alt="Open menu icon">
+        </div>
+    </header>
+    <nav role="navigation" class="main-nav">
+        <img src="img/close-icon.svg" class="icon close-icon" alt="Close menu icon">
+        <fieldset>
+            <input class="search-field" type="text" placeholder="Search...">
+            <button type="button" class="search-icon"></button>
+        </fieldset>
+        <ul>
+            <li>
+                <a href="https://www.urmc.rochester.edu/strong-memorial/about-us.aspx">About Us</a>
+            </li>
+            <li>
+                <a href="http://www.urmc.rochester.edu/find-physician/">Find A Physician</a>
+            </li>
+            <li>
+                <a href="https://www.urmc.rochester.edu/strong-memorial/patients-families.aspx">Patients & Families</a>
+            </li>
+            <li>
+                <a href="https://www.urmc.rochester.edu/strong-memorial/visiting-information.aspx">Visiting Information</a>
+            </li>
+            <li>
+                <a href="https://www.urmc.rochester.edu/strong-memorial/amenities-services-resources.aspx">Services & Amenities</a>
+            </li>
+            <li>
+                <a href="https://www.urmc.rochester.edu/strong-memorial/parking-directions.aspx">Parking & Directions</a>
+            </li>
+            <li>
+                <a href="https://www.urmc.rochester.edu/strong-memorial/contact-us.aspx">Contact Us</a>
+            </li>
+            <li class="explore-link">
+                <a href="https://www.urmc.rochester.edu/explore.aspx">Explore URMC</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Removed carousal. This site sums up nicely why I don't use them (http://shouldiuseacarousel.com/). The top image isn't very good quality but I think it could look really nice if we could get a nice high-res one up there. -->
+    <section class="intro-img">
+        <div class="intro-img-container">
+            <img src="img/visiting.jpg" alt="YOU ARE a heart attack survivor. Read Duff's story">
+            <div class="overlay"></div>
+            <h1><span>Welcome to</span><br/>Strong Memorial Hospital</h1>
+        </div>
+    </section>
+    <!-- Moving phone number and patient resources to the top. No data to back this up but this is what I would want to see first when visiting. -->
+    <section class="general-info">
+        For general information call <a href="tel:1-585-275-2100">(585) 275-2100</a>
+    </section>
+    <section class="max-width patient-resources">
+        <h1>Patient Resources</h1>
+        <div class="large-flex">
+            <a href="https://www.urmc.rochester.edu/people/" class="cta doctor-cta">
+                <div class="flex align-center">
+                    <img src="img/doctor-icon.svg" alt="Find a physician">
+                    <div><span>Find a physician</span><br/>Searching for a specialist? Start here.</div>
+                </div>
+            </a>
+            <a href="http://mychart.urmc.edu/" class="cta mychart-cta">
+                <div class="flex align-center">
+                    <img src="img/clipboard-icon.svg" alt="Log in to MyChart">
+                    <div><span>Log in to MyChart</span><br/>Access your health information now.</div>
+                </div>
+            </a>
+            <a href="https://www.urmc.rochester.edu/patients-families/bill-pay/general-information/customer-price-estimation.cfm" class="cta cost-cta">
+                <div class="flex align-center">
+                    <img src="img/wallet-icon.svg" alt="Health care cost calculator">
+                    <div><span>Health care cost calculator</span><br/>Find the cost of services.</div>
+                </div>
+            </a>
+            <a href="https://www.urmc.rochester.edu/libraries/miner/ask_librarian/index.cfm?loc=urmcsite" class="cta librarian-cta">
+                <div class="flex align-center">
+                    <img src="img/question-icon.svg" alt="Ask a medical librarian">
+                    <div><span>Ask a medical librarian</span><br/>Request information about your diagnosis, condition or treatment.</div>
+                </div>
+            </a>
+            <a href="https://www.urmc.rochester.edu/strong-memorial/services-amenities/services/Patient-and-Family-Relations.aspx" class="cta patient-cta">
+                <div class="flex align-center">
+                    <img src="img/handshake-icon.svg" alt="Patient & family relations">
+                    <div><span>Patient & family relations</span><br/>Find out about this confidential resource for patients and families.</div>
+                </div>
+            </a>
+            <a href="https://www.urmc.rochester.edu/strong-memorial/patients-families/hospital-stay/discharge-preparation.aspx" class="cta parking-cta">
+                <div class="flex align-center">
+                    <img src="img/parking-icon.svg" alt="Strong Hospital patient discharge loop">
+                    <div><span>Strong Hospital patient discharge loop</span><br/>More information and directions</div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <div class="max-width x-large-flex">
+        <div class="flex-2">
+            <section class="about"> <!-- Added about section to give a little balance on desktop -->
+                <h1>About Strong Memorial</h1>
+                <p>Strong is an exemplary teaching hospital with advanced scientific proficiencies, robust patient care services, and formidable community relations. These qualities and the dedicated staff who support them are precisely what elevate Strong’s reputation. As a teaching hospital, all of Strong’s medical clinicians are clinician scholars with faculty appointments (at the University of Rochester School of Medicine and Dentistry) who supervise residents and participate in the education of residents and students. The result is a learning environment immersed in research, education, community, and innovation—Medicine of the Highest Order.</p>
+            </section>
+            <section class="news">
+                <h1>Strong Memorial News</h1>
+                <a href="https://www.urmc.rochester.edu/news/story/5395/fuller-spencer-tapped-to-lead-strong-memorial-and-highland-hospitals-finances" class="cta">
+                    <div class="flex">
+                        <img src="img/fuller.jpg" alt="Fuller Spencer Tapped to Lead Strong Memorial and Highland Hospitals Finances">
+                        <div>Jul 25, 2018<br/><span>Fuller Spencer Tapped to Lead Strong Memorial and Highland Hospitals Finances</span></div>
+                    </div>
+                </a>
+                <a href="https://www.urmc.rochester.edu/news/story/5320/run-walk-or-pledge-your-support-for-transplant-patients-at-the-17th-annual-rochester-river-run" class="cta">
+                    <div class="flex">
+                        <img src="img/run.jpg" alt="Run, Walk or Pledge Your Support for Transplant Patients at the 17th Annual Rochester River Run">
+                        <div>Apr 10, 2018<br/><span>Run, Walk or Pledge Your Support for Transplant Patients at the 17th Annual Rochester River Run</span></div>
+                    </div>
+                </a>
+                <a href="https://www.urmc.rochester.edu/news/story/5294/medical-students-meet-their-matches-march-16" class="cta">
+                    <div class="flex">
+                        <img src="img/med-students.jpg" alt="Medical Students Meet Their Matches March 16">
+                        <div>Mar 14, 2018<br/><span>Medical Students Meet Their Matches March 16</span></div>
+                    </div>
+                </a>
+                <a class="see-more" href="https://www.urmc.rochester.edu/news/archives/archive-search.aspx?searchtype=bycategory&category=90">See all the news</a>
+            </section>
+        </div>
+        <section class="flex-1 max-width quick-links">
+            <h1>Quick Links</h1>
+            <ul>
+                <li><a href="/strong-memorial/contact-us.aspx">Important Phone Numbers</a></li>
+                <li><a href="/strong-memorial/visiting-information/Emergency-Room.aspx">Emergency Room Info</a></li>
+                <li><a href="/strong-memorial/services-amenities/services/Patient-and-Family-Relations.aspx">Patient &amp; Family Relations</a></li>
+                <li><a href="/strong-memorial/amenities-services-resources/Services/interpreters.aspx">Interpreter Services</a></li>
+                <li><a href="/strong-memorial/non-discrimination-policy.aspx">Non-discrimination Policy</a></li>
+                <li><a href="/strong-memorial/patients-families/emr.aspx">MyChart/eRecord</a></li>
+                <li><a href="/health-information-management.aspx">Health Information Management: Release of Information</a></li>
+                <li><a href="/quality/">Quality &amp; Safety</a></li>
+                <li><a href="/clinical-trials/">Open Clinical Trials</a></li>
+                <li><a href="/strong-memorial/services-amenities/services/email-smh-patient.aspx">Email a Patient</a></li>
+                <li><a href="/strong-memorial/services-amenities/services/banking-atm.aspx">Sending Mail to a Patient</a></li>
+                <li><a href="/strong-memorial/patients-families/star-employees/Nominate-a-Strong-Star.aspx">Nominate a Strong Star</a></li>
+                <li><a class="link-external" href="https://www.health.ny.gov/professionals/patients/patient_rights/index.htm">Patient Bill of Rights</a></li>
+            </ul> 
+            <h1>Billing & Insurance</h1>
+            <ul>
+                <li><a href="https://www.urmc.rochester.edu/patients-families/bill-pay/general-information/customer-price-estimation.cfm">Health Care Cost Estimator</a></li>
+                <li><a href="https://www.urmc.rochester.edu/patients-families/bill-pay/insurance.cfm">Questions About Health Care Costs</a></li>
+                <li><a href="https://www.urmc.rochester.edu/patients-families/bill-pay/billing-form.cfm?app_name=smh">Pay Your Bill Online</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <nav role="navigation" class="footer-top">
+            <div class="large-flex max-width">
+                <ul>
+                    <li>URMC Information</li>
+                    <li><a href="/About-Us.aspx" title="Footer: About URMC">About URMC</a></li>
+                    <li><a href="/patients-families/our-hospitals.aspx" title="Footer: Our Hospitals">Our Hospitals</a></li>
+                    <li><a href="/about-us/departments-centers.aspx" title="Footer: Departments &amp; Centers">Departments &amp; Centers</a></li>
+                    <li><a href="/about-us/directions.aspx" title="Footer: Directions &amp; Parking">Directions &amp; Parking</a></li>
+                    <li><a href="/news/" title="Footer: Newsroom">Newsroom</a></li>
+                    <li><a href="/careers.aspx" title="Footer: Job Opportunities">Job Opportunities</a></li>
+                    <li><a href="/contact.aspx" title="Footer: Contact Information">Contact Information</a></li>
+                </ul>
+                
+                <ul>
+                    <li>Tools</li>
+                    <li><a href="https://www.urmc.rochester.edu/events/" title="Footer: Event Calendar">Event Calendar</a></li>
+                    <li><a href="https://www.urmc.rochester.edu/find-physician/" title="Footer: Find a Physician">Find a Physician</a></li>
+                    <li><a href="https://www.urmc.rochester.edu/encyclopedia/" title="Footer: Health Encyclopedia">Health Encyclopedia</a></li>
+                    <li><a href="http://www.urmc.rochester.edu/roster.aspx">Faculty Lists</a></li>
+                    <li><a href="https://mychart.urmc.rochester.edu/mychart/" title="Footer: MyChart Patient Portal">MyChart Patient Portal</a></li>
+                    <li><a href="https://www.urmc.rochester.edu/patients-families/bill-pay/" title="Footer: Online Bill Pay">Online Bill Pay</a></li>
+                    <li><a href="https://www.urmc.rochester.edu/profiles/search/" title="Footer: Research Network">Research Network</a></li>
+                </ul>
+                
+                <ul>
+                    <li>General Information</li>
+                    <li><a href="https://www.urmedicine.org" title="Footer: UR Medicine">UR Medicine</a></li>
+                    <li><a href="https://www.rochester.edu" title="Footer: University of Rochester">University of Rochester</a></li>
+                    <li><a href="https://www.rochester.edu/accessibility.html" title="Footer: Web Accessibility">Web Accessibility</a></li>
+                    <li><a href="https://info.rochester.edu/FacultyStaffDirectory/" title="Footer: Faculty &amp; Staff Directory">Faculty &amp; Staff Directory</a></li>
+                    <li><a href="https://www.rochester.edu/emergency/" title="Footer: Emergency Information">Emergency Information</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer-bottom">
+            <div class="max-width">
+                <p>&copy;2018 University of Rochester Medical Center&nbsp;Rochester, <abbr title="New York">NY</abbr></p>
+                <ul>
+                    <li><a href="https://sites.urmc.rochester.edu/" title="Footer: Intranet">Intranet</a></li>
+                    <li><a href="https://mail.urmc.rochester.edu" title="Footer: Email">Email</a></li>
+                    <li><a href="https://ps.its.rochester.edu/psp/HRPRD/" title="Footer: Human Resources Management System"><abbr title="Human Resources Management System">HRMS</abbr></a></li>
+                    <li><a href="/remote-access/" title="Footer: Virtual Private Network">Remote Access <abbr title="Virtual Private Network">(VPN)</abbr></a></li>
+                    <li><a href="/privacy/" title="Footer: Privacy Topics">Privacy Topics</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="lib/script.js"></script>
+</body>
+</html>
